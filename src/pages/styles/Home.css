@@ -1,0 +1,21 @@
+.Home__container { 
+    height: 610px;
+    background: url('../../img/stars.svg'), #1B1B25;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Home__container {
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .Home__img {
+        height: 200px;
+        width: 200px;
+    }
+}
