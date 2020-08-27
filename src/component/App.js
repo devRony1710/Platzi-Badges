@@ -1,11 +1,11 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import Layout from './Layout'
 import BadgeNew from '../pages/BadgeNew'
 import Badges from '../pages/Badges'
 import Home from '../pages/Home'
 
-function App() {
+function App () {
     return(
         <BrowserRouter>
             <Layout>
