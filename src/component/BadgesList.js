@@ -1,6 +1,5 @@
 import React from 'react'
 import './styles/BadgesList.css'
-import logoList from '../img/unnamed.png'
 import {Link} from 'react-router-dom'
 import Gravatar from './Gravatar'
 
@@ -22,16 +21,18 @@ class BadgesList extends React.Component {
                     {this.props.badges.map( (badge) => {
                         return (
                             <li className="BadgesListItem" key= {badge.id}>
-                                <Gravatar
-                                className="BadgesListItem__avatar"
-                                email={badge.email}
-                                alt="avatar"
-                                />
-                                <div className="listInfo">
-                                    <p>{badge.firstName} {badge.lastName}</p>
-                                    <p>{badge.jobTitle}</p>
-                                    <p>{badge.twitter}</p>
-                                </div>
+                                <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}/edit`}>
+                                    <Gravatar
+                                    className="BadgesListItem__avatar"
+                                    email={badge.email}
+                                    alt="avatar"
+                                    />
+                                    <div className="listInfo">
+                                        <p>{badge.firstName} {badge.lastName}</p>
+                                        <p>{badge.jobTitle}</p>
+                                        <p>{badge.twitter}</p>
+                                    </div>
+                                </Link>
                             </li>
                         )
                     })}
